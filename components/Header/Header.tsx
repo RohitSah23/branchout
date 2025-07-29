@@ -35,7 +35,6 @@ export default function Header() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <Image src={Logo} alt="Branch Out Consultancy" width={50} height={50} />
             <div className="hidden sm:block">
@@ -45,14 +44,13 @@ export default function Header() {
                 Branch Out
               </span>
               <div className={`text-sm font-medium transition-colors duration-300 ${
-                isScrolled ? 'text-red-600' : 'text-red-300'
+                isScrolled ? 'text-red-600' : 'text-red-400'
               }`}>
                 Consultancy
               </div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
@@ -69,8 +67,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Link
               href="/contact"
               className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
@@ -79,10 +76,10 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+  
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-all duration-300 ${
+            className={`lg:hidden p-2 rounded-lg transition-all cursor-pointer duration-300 ${
               isScrolled 
                 ? 'text-black hover:bg-red-50' 
                 : 'text-white hover:bg-white/10'
