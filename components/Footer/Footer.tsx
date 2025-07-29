@@ -11,7 +11,7 @@ const quickLinks = [
   { name: 'Contact Us', href: '/contact' },
   { name: 'Privacy Policy', href: '/privacy' }
 ];
-import Logo from '../app/assets/Logo.png';
+import Logo from '../../app/assets/Logo.png';
 import Image from 'next/image';
 
 const socialLinks = [
