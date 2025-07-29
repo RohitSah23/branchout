@@ -85,11 +85,10 @@ export default function Header() {
                 : 'text-white hover:bg-white/10'
             }`}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={24} className='cursor-pointer' /> : <Menu size={24} className='cursor-pointer'  />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-red-100 backdrop-blur-lg">
             <div className="px-4 py-6 space-y-4">
