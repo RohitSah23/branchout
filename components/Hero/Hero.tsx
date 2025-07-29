@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Play, MapPin, Users, Award, Building } from 'lucide-react';
+import { ArrowRight, Play, MapPin, Users, Award } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -14,8 +14,8 @@ export default function Hero() {
         <div className="space-y-12 animate-fade-in py-20 sm:py-28 md:py-32">
           <div className="space-y-6">
             <div className="inline-flex items-center px-4 py-2 bg-red-50 text-red-600 rounded-full text-xs sm:text-sm font-semibold mb-4">
-              <Building className="h-4 w-4 mr-2" />
-              BRANCH OUT CONSULTANCY :
+              <MapPin className="h-4 w-4 mr-2" />
+              Branch Out Consultancy:
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
@@ -29,23 +29,22 @@ export default function Hero() {
               Expert visa facilitation, placement with Malta's top schools and employers, and end-to-end support fully compliant with Maltese law.
             </p>
           </div>
+<div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-6 sm:pt-10">
+  <button
+    className="inline-flex cursor-pointer items-center justify-center w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-base sm:text-lg font-bold rounded-full shadow-xl hover:shadow-red-500/30 transform hover:scale-105 transition-all duration-300 group"
+  >
+    <span>Our Services</span>
+    <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1" />
+  </button>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-6 sm:pt-10">
-            <button 
-       
-              className="w-full sm:w-auto bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 text-base sm:text-lg font-bold rounded-full shadow-2xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-300 group"
-            >
-              Our Services
-              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
-            </button>
-            
-            <button 
-              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-base sm:text-lg font-bold rounded-full backdrop-blur-sm bg-white/10 group"
-            >
-              <Play className="mr-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:scale-110 transition-transform" />
-              About Us
-            </button>
-          </div>
+  <button
+    className="inline-flex items-center cursor-pointer justify-center w-full sm:w-auto px-6 py-3 border-2 border-white text-white text-base sm:text-lg font-bold rounded-full backdrop-blur-md bg-white/10 hover:bg-white hover:text-black transition-all duration-300 group"
+  >
+    <Play className="mr-2 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:scale-110" />
+    <span>About Us</span>
+  </button>
+</div>
+
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 pt-12 sm:pt-16 max-w-5xl mx-auto">
             {[
