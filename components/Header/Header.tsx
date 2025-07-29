@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import Logo from '../app/assets/Logo.png';
 import Image from 'next/image';
+import Logo from '../../app/assets/Logo.png';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
