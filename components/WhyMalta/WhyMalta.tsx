@@ -85,13 +85,20 @@ export default function WhyMalta() {
         </div>
 
         {/* Malta Flag Element */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center justify-center w-20 h-14 rounded-lg overflow-hidden shadow-lg mx-auto mb-4">
-            <div className="w-1/2 h-full bg-white"></div>
-            <div className="w-1/2 h-full bg-red-600"></div>
-          </div>
-          <p className="text-gray-500 text-sm font-medium">Proud to serve Malta's international community</p>
-        </div>
+    {/* Malta Flag Element */}
+<div className="mt-16 text-center">
+  <div className="inline-flex items-center justify-center w-20 h-14 rounded-lg overflow-hidden shadow-lg mx-auto mb-4">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg"
+      alt="Malta Flag"
+      className="w-full h-full object-cover"
+    />
+  </div>
+  <p className="text-gray-500 text-sm font-medium">
+    Proud to serve Malta's international community
+  </p>
+</div>
+
       </div>
     </section>
   );
