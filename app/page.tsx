@@ -5,6 +5,7 @@ import WhyMalta from "@/components/WhyMalta/WhyMalta";
 import Services from "@/components/Services/Services";
 import Courses from "@/components/Courses/Courses";
 import ApplicationProcess from "@/components/ApplicationProcess/ApplicationProcess";
+import Values from "@/components/Values/Values";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
     <Services/>
     <Courses/>
     <ApplicationProcess/>
+    <Values/>
     <Footer/>
    </div>
   );
