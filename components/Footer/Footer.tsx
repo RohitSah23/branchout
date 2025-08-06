@@ -52,13 +52,17 @@ export default function Footer() {
             </p>
 
         
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-6 rounded overflow-hidden flex shadow-md">
-                <div className="w-1/2 h-full bg-white"></div>
-                <div className="w-1/2 h-full bg-red-600"></div>
-              </div>
-              <span className="text-gray-400 text-sm">Proudly serving Malta</span>
-            </div>
+         <div className="flex items-center space-x-2">
+  <div className="w-8 h-6 rounded overflow-hidden shadow-md">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg"
+      alt="Malta Flag"
+      className="w-full h-full object-cover"
+    />
+  </div>
+  <span className="text-gray-400 text-sm">Proudly serving Malta</span>
+</div>
+
           </div>
 
       
