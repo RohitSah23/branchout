@@ -1,6 +1,6 @@
 'use client';
 
-import { Briefcase, Award, GraduationCap, ArrowRight, Plane, Users, FileCheck } from 'lucide-react';
+import { Briefcase, Award, GraduationCap, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const services = [

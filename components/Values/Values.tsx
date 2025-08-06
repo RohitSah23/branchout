@@ -73,8 +73,8 @@ export default function Values() {
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-xl p-8 text-white">
             <blockquote className="text-xl lg:text-2xl font-medium italic">
-              "Our commitment to these values ensures that every student and professional we support 
-              receives the highest standard of service and care throughout their Malta journey."
+              &ldquo;Our commitment to these values ensures that every student and professional we support 
+              receives the highest standard of service and care throughout their Malta journey.&rdquo;
             </blockquote>
             <cite className="block mt-4 text-red-200 font-semibold">Branch Out Consultancy Team</cite>
           </div>

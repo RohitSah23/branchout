@@ -54,9 +54,11 @@ export default function Footer() {
         
          <div className="flex items-center space-x-2">
   <div className="w-8 h-6 rounded overflow-hidden shadow-md">
-    <img
+    <Image
       src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg"
       alt="Malta Flag"
+      width={32}
+      height={24}
       className="w-full h-full object-cover"
     />
   </div>

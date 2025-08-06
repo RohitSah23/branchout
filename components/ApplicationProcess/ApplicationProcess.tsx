@@ -53,7 +53,7 @@ export default function ApplicationProcess() {
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our streamlined process makes it easy to apply and secure your place in Malta's top institutions
+            Our streamlined process makes it easy to apply and secure your place in Malta&apos;s top institutions
           </p>
         </div>
 

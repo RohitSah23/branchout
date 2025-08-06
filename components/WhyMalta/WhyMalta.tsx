@@ -1,6 +1,7 @@
 'use client';
 
 import { MapPin, Sun, Users, Plane, Briefcase, Shield } from 'lucide-react';
+import Image from 'next/image';
 
 const benefits = [
   {
@@ -16,7 +17,7 @@ const benefits = [
   {
     icon: Users,
     title: 'English Speaking',
-    description: 'English speaking instruction in one of Europe\'s safest countries with welcoming communities'
+    description: 'English speaking instruction in one of Europe&apos;s safest countries with welcoming communities'
   },
   {
     icon: Plane,
@@ -88,9 +89,11 @@ export default function WhyMalta() {
     {/* Malta Flag Element */}
 <div className="mt-16 text-center">
   <div className="inline-flex items-center justify-center w-20 h-14 rounded-lg overflow-hidden shadow-lg mx-auto mb-4">
-    <img
+    <Image
       src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg"
       alt="Malta Flag"
+      width={80}
+      height={56}
       className="w-full h-full object-cover"
     />
   </div>
