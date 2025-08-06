@@ -98,7 +98,7 @@ export default function WhyMalta() {
     />
   </div>
   <p className="text-gray-500 text-sm font-medium">
-    Proud to serve Malta's international community
+    Proud to serve Malta&apos;s international community
   </p>
 </div>
 
