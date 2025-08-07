@@ -16,10 +16,13 @@ export default function Partners() {
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, #CF142B 1px, transparent 0)`,
-          backgroundSize: '50px 50px'
-        }}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, #CF142B 1px, transparent 0)`,
+            backgroundSize: '50px 50px'
+          }}
+        ></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -29,21 +32,21 @@ export default function Partners() {
             <Building className="h-4 w-4 mr-2" />
             Our Partners
           </div>
-          
+
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
-            Collaborating with Malta's
+            Collaborating with Malta&apos;s
             <span className="text-red-600"> Premier Institutions</span>
           </h2>
-          
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Working with Malta's leading universities, vocational colleges, hospitality groups, and airlines
+            Working with Malta&apos;s leading universities, vocational colleges, hospitality groups, and airlines
           </p>
         </div>
 
         {/* Partners Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {partners.map((partner, index) => (
-            <div 
+            <div
               key={index}
               className="group p-6 bg-gray-50 rounded-xl hover:bg-red-50 transition-all duration-500 hover:-translate-y-1 border border-gray-100 hover:border-red-200"
             >
@@ -51,7 +54,7 @@ export default function Partners() {
                 <div className="w-14 h-14 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <partner.icon className="h-7 w-7 text-white" />
                 </div>
-                
+
                 <div className="flex-1">
                   <h3 className="font-bold text-black group-hover:text-red-600 transition-colors mb-1">
                     {partner.name}
