@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import {
   Target,
   Users,
@@ -34,7 +35,7 @@ const values = [
 ];
 
 const objectives = [
-  "Facilitate seamless student placements in Malta's premier educational institutions",
+  "Facilitate seamless student placements in Malta’s premier educational institutions",
   'Provide comprehensive recruitment solutions for hospitality and aviation sectors',
   'Ensure 100% legal compliance with Maltese immigration and employment regulations',
   'Deliver end-to-end support from application to successful settlement',
@@ -57,7 +58,7 @@ export default function AboutPage() {
             About <span className="text-red-400">Branch Out</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Your trusted partner in Malta's education and employment landscape, building bridges to success since our inception.
+            Your trusted partner in Malta’s education and employment landscape, building bridges to success since our inception.
           </p>
         </div>
       </section>
@@ -79,7 +80,7 @@ export default function AboutPage() {
                 </h2>
 
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Branch Out Consultancy (BOCL) was founded with a clear mission: to bridge the gap between international talent and Malta's thriving educational and employment sectors. With over 25 years of combined HR and global partnership expertise, we have established ourselves as Malta's premier consultancy for international students and skilled professionals.
+                  Branch Out Consultancy (BOCL) was founded with a clear mission: to bridge the gap between international talent and Malta’s thriving educational and employment sectors. With over 25 years of combined HR and global partnership expertise, we have established ourselves as Malta’s premier consultancy for international students and skilled professionals.
                 </p>
               </div>
 
@@ -93,24 +94,23 @@ export default function AboutPage() {
                 <div className="p-6 bg-gray-50 rounded-xl">
                   <Globe className="h-12 w-12 text-red-600 mb-4" />
                   <h4 className="text-lg font-bold text-black mb-2">Global Reach</h4>
-                  <p className="text-gray-600">Connecting talent worldwide with Malta's opportunities</p>
+                  <p className="text-gray-600">Connecting talent worldwide with Malta’s opportunities</p>
                 </div>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="relative rounded-xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg"
-                  alt="Malta Business District"
-                  className="w-full h-[600px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 via-transparent to-transparent" />
-
-                <div className="absolute bottom-8 left-8 right-8 text-white">
-                  <h3 className="text-2xl font-bold mb-2">Malta's Business Hub</h3>
-                  <p className="text-white/90">Where European opportunity meets Mediterranean lifestyle</p>
-                </div>
+            <div className="relative rounded-xl overflow-hidden shadow-2xl">
+              <Image
+                src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg"
+                alt="Malta Business District"
+                width={800}
+                height={600}
+                className="w-full h-[600px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 via-transparent to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 text-white">
+                <h3 className="text-2xl font-bold mb-2">Malta’s Business Hub</h3>
+                <p className="text-white/90">Where European opportunity meets Mediterranean lifestyle</p>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
               The Challenge We <span className="text-red-600">Solve</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Navigating Malta's education and employment landscape can be complex. We simplify the journey.
+              Navigating Malta’s education and employment landscape can be complex. We simplify the journey.
             </p>
           </div>
 
@@ -134,7 +134,7 @@ export default function AboutPage() {
               {
                 icon: Target,
                 title: 'Complex Regulations',
-                desc: 'Malta\'s visa and employment regulations can be overwhelming for international applicants.'
+                desc: 'Malta’s visa and employment regulations can be overwhelming for international applicants.'
               },
               {
                 icon: Users,
@@ -167,7 +167,7 @@ export default function AboutPage() {
               Our <span className="text-red-400">Solution</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide a comprehensive, legally compliant pathway to success in Malta's education and employment sectors.
+              We provide a comprehensive, legally compliant pathway to success in Malta’s education and employment sectors.
             </p>
           </div>
 
@@ -194,9 +194,11 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <img
+              <Image
                 src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg"
                 alt="Malta Success"
+                width={800}
+                height={500}
                 className="w-full h-80 object-cover rounded-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-red-900/60 to-transparent rounded-xl" />
@@ -213,7 +215,7 @@ export default function AboutPage() {
               Values at <span className="text-red-600">Work</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our core values aren't just words—they're the foundation of every interaction and decision we make.
+              Our core values aren’t just words—they’re the foundation of every interaction and decision we make.
             </p>
           </div>
 
