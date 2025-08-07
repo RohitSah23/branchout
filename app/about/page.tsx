@@ -1,6 +1,14 @@
 'use client';
 
-import { Target, Users, Globe, Award, Heart, Scale, CheckCircle } from 'lucide-react';
+import {
+  Target,
+  Users,
+  Globe,
+  Award,
+  Heart,
+  Scale,
+  CheckCircle
+} from 'lucide-react';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
@@ -8,22 +16,25 @@ const values = [
   {
     icon: Heart,
     title: 'Self Responsibility and Integrity',
-    description: 'We uphold the highest standards of personal accountability and ethical conduct in every interaction and decision.'
+    description:
+      'We uphold the highest standards of personal accountability and ethical conduct in every interaction and decision.'
   },
   {
     icon: Users,
     title: 'Democracy and Equality',
-    description: 'We believe in fair treatment and equal opportunities for all, fostering an inclusive environment for success.'
+    description:
+      'We believe in fair treatment and equal opportunities for all, fostering an inclusive environment for success.'
   },
   {
     icon: Scale,
     title: 'Equity and Solidarity',
-    description: 'We stand together with our clients, ensuring fair access to opportunities and supporting collective success.'
+    description:
+      'We stand together with our clients, ensuring fair access to opportunities and supporting collective success.'
   }
 ];
 
 const objectives = [
-  'Facilitate seamless student placements in Malta\'s premier educational institutions',
+  "Facilitate seamless student placements in Malta's premier educational institutions",
   'Provide comprehensive recruitment solutions for hospitality and aviation sectors',
   'Ensure 100% legal compliance with Maltese immigration and employment regulations',
   'Deliver end-to-end support from application to successful settlement',
@@ -35,12 +46,12 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-black via-red-900 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1004584/pexels-photo-1004584.jpeg')] bg-cover bg-center opacity-30"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-red-900/80"></div>
-        
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1004584/pexels-photo-1004584.jpeg')] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-red-900/80" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             About <span className="text-red-400">Branch Out</span>
@@ -61,12 +72,12 @@ export default function AboutPage() {
                   <Target className="h-4 w-4 mr-2" />
                   Our Story
                 </div>
-                
+
                 <h2 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
                   Connecting Dreams with
                   <span className="text-red-600"> Maltese Opportunities</span>
                 </h2>
-                
+
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Branch Out Consultancy (BOCL) was founded with a clear mission: to bridge the gap between international talent and Malta's thriving educational and employment sectors. With over 25 years of combined HR and global partnership expertise, we have established ourselves as Malta's premier consultancy for international students and skilled professionals.
                 </p>
@@ -78,7 +89,7 @@ export default function AboutPage() {
                   <h4 className="text-lg font-bold text-black mb-2">25+ Years</h4>
                   <p className="text-gray-600">Combined expertise in HR and international partnerships</p>
                 </div>
-                
+
                 <div className="p-6 bg-gray-50 rounded-xl">
                   <Globe className="h-12 w-12 text-red-600 mb-4" />
                   <h4 className="text-lg font-bold text-black mb-2">Global Reach</h4>
@@ -89,13 +100,13 @@ export default function AboutPage() {
 
             <div className="relative">
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" 
-                  alt="Malta Business District" 
+                <img
+                  src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg"
+                  alt="Malta Business District"
                   className="w-full h-[600px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 via-transparent to-transparent"></div>
-                
+                <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 via-transparent to-transparent" />
+
                 <div className="absolute bottom-8 left-8 right-8 text-white">
                   <h3 className="text-2xl font-bold mb-2">Malta's Business Hub</h3>
                   <p className="text-white/90">Where European opportunity meets Mediterranean lifestyle</p>
@@ -106,13 +117,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Project Challenge */}
+      {/* Challenges */}
       <section className="py-24 bg-gradient-to-br from-gray-50 to-red-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
-              The Challenge We
-              <span className="text-red-600"> Solve</span>
+              The Challenge We <span className="text-red-600">Solve</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Navigating Malta's education and employment landscape can be complex. We simplify the journey.
@@ -120,34 +130,36 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Target className="h-8 w-8 text-red-600" />
+            {[
+              {
+                icon: Target,
+                title: 'Complex Regulations',
+                desc: 'Malta\'s visa and employment regulations can be overwhelming for international applicants.'
+              },
+              {
+                icon: Users,
+                title: 'Limited Networks',
+                desc: 'International students and professionals often lack local connections and insights.'
+              },
+              {
+                icon: Award,
+                title: 'Quality Assurance',
+                desc: 'Ensuring placements meet high standards and compliance requirements is crucial.'
+              }
+            ].map((item, i) => (
+              <div key={i} className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <item.icon className="h-8 w-8 text-red-600" />
+                </div>
+                <h3 className="text-xl font-bold text-black mb-4">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
               </div>
-              <h3 className="text-xl font-bold text-black mb-4">Complex Regulations</h3>
-              <p className="text-gray-600">Malta's visa and employment regulations can be overwhelming for international applicants.</p>
-            </div>
-
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold text-black mb-4">Limited Networks</h3>
-              <p className="text-gray-600">International students and professionals often lack local connections and insights.</p>
-            </div>
-
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Award className="h-8 w-8 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold text-black mb-4">Quality Assurance</h3>
-              <p className="text-gray-600">Ensuring placements meet high standards and compliance requirements is crucial.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Our Solution */}
+      {/* Solution */}
       <section className="py-24 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -165,40 +177,35 @@ export default function AboutPage() {
               <p className="text-gray-300 text-lg leading-relaxed">
                 Branch Out Consultancy serves as your dedicated vehicle to success in Malta. We combine deep local knowledge with international best practices to ensure every placement is not just successful, but transformative.
               </p>
-              
+
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span className="text-gray-300">End-to-end application support</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span className="text-gray-300">Legal compliance guarantee</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span className="text-gray-300">Ongoing settlement support</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span className="text-gray-300">Premium partner network</span>
-                </div>
+                {[
+                  'End-to-end application support',
+                  'Legal compliance guarantee',
+                  'Ongoing settlement support',
+                  'Premium partner network'
+                ].map((text, i) => (
+                  <div key={i} className="flex items-center space-x-3">
+                    <CheckCircle className="h-6 w-6 text-red-400" />
+                    <span className="text-gray-300">{text}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
             <div className="relative">
-              <img 
-                src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg" 
-                alt="Malta Success" 
+              <img
+                src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg"
+                alt="Malta Success"
                 className="w-full h-80 object-cover rounded-xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-red-900/60 to-transparent rounded-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-red-900/60 to-transparent rounded-xl" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values at Work */}
+      {/* Values */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -261,18 +268,16 @@ export default function AboutPage() {
                 Based in Valletta, our Malta operations serve as the central hub for all client services. Our local team provides on-ground support, maintains relationships with partner institutions, and ensures compliance with all Maltese regulations.
               </p>
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span>Local expertise and market knowledge</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span>Direct partnerships with institutions</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span>Regulatory compliance monitoring</span>
-                </div>
+                {[
+                  'Local expertise and market knowledge',
+                  'Direct partnerships with institutions',
+                  'Regulatory compliance monitoring'
+                ].map((text, i) => (
+                  <div key={i} className="flex items-center space-x-3">
+                    <CheckCircle className="h-6 w-6 text-red-400" />
+                    <span>{text}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -284,18 +289,16 @@ export default function AboutPage() {
                 Our international operations extend our reach globally, connecting with students and professionals worldwide. We maintain strategic partnerships and representation in key markets to facilitate seamless application processes.
               </p>
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span>Global recruitment networks</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span>International partnerships</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-red-400" />
-                  <span>Multi-language support services</span>
-                </div>
+                {[
+                  'Global recruitment networks',
+                  'International partnerships',
+                  'Multi-language support services'
+                ].map((text, i) => (
+                  <div key={i} className="flex items-center space-x-3">
+                    <CheckCircle className="h-6 w-6 text-red-400" />
+                    <span>{text}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
