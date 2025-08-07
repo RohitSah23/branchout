@@ -6,12 +6,14 @@ import Services from "@/components/Services/Services";
 import Courses from "@/components/Courses/Courses";
 import ApplicationProcess from "@/components/ApplicationProcess/ApplicationProcess";
 import Values from "@/components/Values/Values";
+import About from "@/components/About/About";
 
 export default function Home() {
   return (
    <div>
     <Header/>
     <Hero/>
+    <About/>
     <WhyMalta/>
     <Services/>
     <Courses/>
