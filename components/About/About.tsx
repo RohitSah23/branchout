@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Target, Users, Globe } from 'lucide-react';
 
@@ -23,16 +24,16 @@ export default function About() {
                 <Target className="h-4 w-4 mr-2" />
                 About Branch Out Consultancy
               </div>
-              
+
               <h2 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
                 Your Trusted Partner for 
                 <span className="text-red-600"> Malta Success</span>
               </h2>
-              
+
               <p className="text-xl text-gray-600 leading-relaxed">
                 Branch Out Consultancy (BOCL) connects international students and skilled professionals 
-                with Malta's leading educational institutions and companies. With over 25 years of HR 
-                and global partnership expertise we ensure every placement succeeds legally transparently 
+                with Malta&apos;s leading educational institutions and companies. With over 25 years of HR 
+                and global partnership expertise, we ensure every placement succeeds legally, transparently, 
                 and efficiently.
               </p>
             </div>
@@ -43,11 +44,11 @@ export default function About() {
                 <h4 className="text-lg font-bold text-black mb-2">Expert Team</h4>
                 <p className="text-gray-600">25+ years of combined experience in HR and international partnerships</p>
               </div>
-              
+
               <div className="p-6 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors duration-300 group">
                 <Globe className="h-12 w-12 text-red-600 mb-4 group-hover:scale-110 transition-transform" />
                 <h4 className="text-lg font-bold text-black mb-2">Global Reach</h4>
-                <p className="text-gray-600">Connecting talent worldwide with Malta's premier opportunities</p>
+                <p className="text-gray-600">Connecting talent worldwide with Malta&apos;s premier opportunities</p>
               </div>
             </div>
 
@@ -63,13 +64,15 @@ export default function About() {
           {/* Visual */}
           <div className="relative">
             <div className="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-              <img 
+              <Image 
                 src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg" 
                 alt="Malta Architecture" 
+                width={900}
+                height={600}
                 className="w-full h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 via-transparent to-transparent"></div>
-              
+
               {/* Overlay Content */}
               <div className="absolute bottom-8 left-8 right-8 text-white">
                 <h3 className="text-2xl font-bold mb-2">Malta Awaits You</h3>
