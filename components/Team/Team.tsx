@@ -31,14 +31,17 @@ export default function Team() {
     <section className="py-24 bg-gradient-to-br from-black via-red-900 to-black relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
                            linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
                            linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%), 
                            linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%)`,
-          backgroundSize: '80px 80px',
-          backgroundPosition: '0 0, 0 40px, 40px -40px, -40px 0px'
-        }}></div>
+            backgroundSize: '80px 80px',
+            backgroundPosition: '0 0, 0 40px, 40px -40px, -40px 0px'
+          }}
+        ></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -48,12 +51,12 @@ export default function Team() {
             <User className="h-4 w-4 mr-2" />
             Our Team
           </div>
-          
+
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Meet the Experts Behind
             <span className="text-red-400"> Your Success</span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Our experienced team combines local Malta expertise with global partnership knowledge
           </p>
@@ -62,10 +65,7 @@ export default function Team() {
         {/* Team Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
-            <div 
-              key={index}
-              className="group relative"
-            >
+            <div key={index} className="group relative">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 h-full">
                 {/* Icon */}
                 <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
