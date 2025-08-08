@@ -21,7 +21,6 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
   };
 
@@ -57,7 +56,9 @@ export default function ContactPage() {
               <Card className="shadow-2xl border-0 rounded-xl overflow-hidden">
                 <CardHeader className="bg-gradient-to-r from-red-600 to-red-700 text-white p-8">
                   <CardTitle className="text-2xl font-bold">Send us a Message</CardTitle>
-                  <p className="text-red-100">Fill out the form below and we'll get back to you within 24 hours</p>
+                  <p className="text-red-100">
+                    Fill out the form below and we&apos;ll get back to you within 24 hours
+                  </p>
                 </CardHeader>
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -99,7 +100,7 @@ export default function ContactPage() {
                       
                       <div className="space-y-2">
                         <label className="text-sm font-semibold text-gray-700">Inquiry Type *</label>
-                        <Select onValueChange={(value) => handleInputChange('inquiryType', value)}>
+                        <Select onValueChange={(value: string) => handleInputChange('inquiryType', value)}>
                           <SelectTrigger className="rounded-xl border-gray-200 focus:border-red-500 focus:ring-red-500">
                             <SelectValue placeholder="Select inquiry type" />
                           </SelectTrigger>
