@@ -3,14 +3,11 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 /**
- * Props for the custom Textarea component.
+ * Props for the Textarea component.
  *
- * Extends all standard HTML textarea attributes from React.
- *
- * @see {@link https://react.dev/reference/react-dom/components/textarea}
+ * Extends all standard HTML textarea attributes available for a `<textarea>` element.
  */
-export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {

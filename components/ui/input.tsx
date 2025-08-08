@@ -6,13 +6,8 @@ import { cn } from '@/lib/utils';
  * Props for the Input component.
  *
  * Extends all standard HTML input attributes available for an `<input>` element.
- * This allows the Input component to accept any valid input properties such as
- * `type`, `value`, `onChange`, etc.
- *
- * @see {@link https://react.dev/reference/react-dom/components/input}
  */
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+export type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
