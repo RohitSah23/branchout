@@ -1,29 +1,35 @@
-'use client';
-
-import { User, Briefcase, Users, Globe } from 'lucide-react';
+import Image from "next/image";
+import { Users, Globe } from "lucide-react";
+import CEOImg from "@/app/assets/CEO.png";
 
 const team = [
   {
-    name: 'Dr Anton Callus',
-    role: 'Malta Operations Lead and HR Specialist',
-    description: 'Leading Malta operations with extensive HR expertise and local market knowledge',
-    icon: Briefcase,
-    specialty: 'HR & Operations'
+    name: "Dr Anton Callus",
+    role: "CEO",
+    description:
+      "Leading Malta operations with extensive HR expertise and local market knowledge",
+    specialty: "HR & Operations",
+    image: CEOImg,
+    order: "lg:order-2",
   },
   {
-    name: 'Gulzar Bajwa',
-    role: 'Global Partnerships and Business Strategy Lead',
-    description: 'Developing strategic partnerships and expanding global business opportunities',
-    icon: Globe,
-    specialty: 'Strategy & Partnerships'
-  },
-  {
-    name: 'Anmol Bajwa',
-    role: 'Student and Employer Liaison Lead',
-    description: 'Connecting students with opportunities and maintaining employer relationships',
+    name: "Anmol Bajwa",
+    role: "Student and Employer Liaison Lead",
+    description:
+      "Connecting students with opportunities and maintaining employer relationships",
+    specialty: "Student Relations",
     icon: Users,
-    specialty: 'Student Relations'
-  }
+    order: "lg:order-1",
+  },
+  {
+    name: "Gulzar Bajwa",
+    role: "Global Partnerships and Business Strategy Lead",
+    description:
+      "Developing strategic partnerships and expanding global business opportunities",
+    specialty: "Strategy & Partnerships",
+    icon: Globe,
+    order: "lg:order-3",
+  },
 ];
 
 export default function Team() {
@@ -35,11 +41,11 @@ export default function Team() {
           className="absolute inset-0"
           style={{
             backgroundImage: `linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
-                           linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
-                           linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%), 
-                           linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%)`,
-            backgroundSize: '80px 80px',
-            backgroundPosition: '0 0, 0 40px, 40px -40px, -40px 0px'
+                               linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%), 
+                               linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%), 
+                               linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%)`,
+            backgroundSize: "80px 80px",
+            backgroundPosition: "0 0, 0 40px, 40px -40px, -40px 0px",
           }}
         ></div>
       </div>
@@ -48,7 +54,6 @@ export default function Team() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-red-600/20 text-red-400 rounded-full text-sm font-semibold mb-4 backdrop-blur-sm">
-            <User className="h-4 w-4 mr-2" />
             Our Team
           </div>
 
@@ -65,11 +70,24 @@ export default function Team() {
         {/* Team Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
-            <div key={index} className="group relative">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 h-full">
-                {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <member.icon className="h-8 w-8 text-white" />
+            <div key={index} className={`group relative ${member.order}`}>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 h-full text-center">
+                
+                {/* Square Photo for CEO, Icons for Others */}
+                <div
+                  className={`${
+                    member.image ? "w-28 h-28" : "w-16 h-16"
+                  } bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
+                >
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <member.icon className="w-8 h-8 text-white" />
+                  )}
                 </div>
 
                 {/* Content */}
@@ -83,9 +101,7 @@ export default function Team() {
                     </div>
                   </div>
 
-                  <p className="text-gray-300 leading-relaxed">
-                    {member.description}
-                  </p>
+                  <p className="text-gray-300 leading-relaxed">{member.description}</p>
 
                   <div className="inline-flex items-center px-3 py-1 bg-red-600/20 text-red-400 rounded-full text-xs font-semibold">
                     {member.specialty}
