@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Globe, Linkedin, Twitter, Facebook } from 'lucide-react';
-import Logo from '../../app/assets/Logo.png';
-import Image from 'next/image';
 
 const quickLinks = [
   { name: 'Home', href: '#' },
@@ -13,6 +11,8 @@ const quickLinks = [
   { name: 'Contact Us', href: '/contact' },
   { name: 'Privacy Policy', href: '/privacy' }
 ];
+import Logo from '../../app/assets/Logo.png';
+import Image from 'next/image';
 
 const socialLinks = [
   { name: 'LinkedIn', href: '#', icon: Linkedin },
@@ -36,7 +36,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
-          {/* Logo & About */}
+       
           <div className="lg:col-span-1 space-y-6">
             <Link href="/" className="flex items-center space-x-3">
               <Image src={Logo} alt="Branch Out Consultancy" width={50} height={50} />
@@ -51,21 +51,23 @@ export default function Footer() {
               ensuring legal, transparent, and efficient placements.
             </p>
 
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-6 rounded overflow-hidden shadow-md">
-                <Image
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg"
-                  alt="Malta Flag"
-                  width={32}
-                  height={24}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="text-gray-400 text-sm">Proudly serving Malta</span>
-            </div>
+        
+         <div className="flex items-center space-x-2">
+  <div className="w-8 h-6 rounded overflow-hidden shadow-md">
+    <Image
+      src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg"
+      alt="Malta Flag"
+      width={32}
+      height={24}
+      className="w-full h-full object-cover"
+    />
+  </div>
+  <span className="text-gray-400 text-sm">Proudly serving Malta</span>
+</div>
+
           </div>
 
-          {/* Quick Links */}
+      
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-white">Quick Links</h3>
             <ul className="space-y-3">
@@ -82,7 +84,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Information */}
+      
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-white">Contact Information</h3>
             <div className="space-y-4">
@@ -127,7 +129,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social & Hours */}
+      
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-white">Connect With Us</h3>
             <div className="flex space-x-4">
@@ -150,24 +152,32 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 rounded-2xl py-8 px-6 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 text-gray-400 text-sm text-center sm:text-left">
-          <div>
-            Branch Out Consultancy Services Limited, incorporated in Malta on 12 August 2025, Registration No. C 112890.
-          </div>
-          <div className="flex items-center space-x-6">
-            <Link href="/privacy" className="hover:text-red-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-red-400 transition-colors">
-              Terms of Service
-            </Link>
-          </div>
-        </div>
+      
+     <div className="border-t border-white/10 rounded-2xl px-6 py-6 text-gray-400 text-sm ">
+  {/* Registration Details */}
+  <div className="text-center flex flex-col items-center space-y-2">
+    Branch Out Consultancy Services Limited, incorporated in Malta on 12 August 2025, Registration No. C 112890.
+  </div>
 
-        <div className="mt-4 text-center text-gray-500 text-xs">
-          © {new Date().getFullYear()} Branch Out Consultancy Services Ltd. All rights reserved.
-        </div>
+  {/* Space */}
+  <div className="my-4 border-t border-white/10"></div>
+
+  {/* Bottom Row */}
+  <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+    <div>
+      © 2025 Branch Out Consultancy Services Ltd. All rights reserved.
+    </div>
+    <div className="flex items-center space-x-6">
+      <Link href="/privacy" className="hover:text-red-400 transition-colors">
+        Privacy Policy
+      </Link>
+      <Link href="/terms" className="hover:text-red-400 transition-colors">
+        Terms of Service
+      </Link>
+    </div>
+  </div>
+</div>
+
       </div>
     </footer>
   );
