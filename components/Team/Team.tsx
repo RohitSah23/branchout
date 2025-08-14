@@ -4,15 +4,6 @@ import CEOImg from "@/app/assets/CEO.png";
 
 const team = [
   {
-    name: "Dr Anton Callus",
-    role: "CEO",
-    description:
-      "Leading Malta operations with extensive HR expertise and local market knowledge",
-    specialty: "HR & Operations",
-    image: CEOImg,
-    order: "lg:order-2",
-  },
-  {
     name: "Anmol Bajwa",
     role: "Student and Employer Liaison Lead",
     description:
@@ -20,6 +11,15 @@ const team = [
     specialty: "Student Relations",
     icon: Users,
     order: "lg:order-1",
+  },
+  {
+    name: "Dr Anton Callus",
+    role: "CEO",
+    description:
+      "Leading Malta operations with extensive HR expertise and local market knowledge",
+    specialty: "HR & Operations",
+    image: CEOImg,
+    order: "lg:order-2",
   },
   {
     name: "Gulzar Bajwa",
@@ -45,7 +45,7 @@ export default function Team() {
                                linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%), 
                                linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%)`,
             backgroundSize: "80px 80px",
-            backgroundPosition: "0 0, 0 40px, 40px -40px, -40px 0px",
+            backgroundPosition: "0 0, 0 40px, 40px -40px, -40px 0px"
           }}
         ></div>
       </div>
@@ -71,13 +71,15 @@ export default function Team() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <div key={index} className={`group relative ${member.order}`}>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 h-full text-center">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 h-full">
                 
                 {/* Square Photo for CEO, Icons for Others */}
                 <div
                   className={`${
-                    member.image ? "w-28 h-28" : "w-16 h-16"
-                  } bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
+                    member.image
+                      ? "w-28 h-28 mx-auto"
+                      : "w-16 h-16"
+                  } bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
                 >
                   {member.image ? (
                     <Image
@@ -86,12 +88,12 @@ export default function Team() {
                       className="object-cover w-full h-full"
                     />
                   ) : (
-                    <member.icon className="w-8 h-8 text-white" />
+                    <member.icon className="h-8 w-8 text-white" />
                   )}
                 </div>
 
                 {/* Content */}
-                <div className="space-y-4">
+                <div className="space-y-4 text-center">
                   <div>
                     <h3 className="text-xl font-bold text-white group-hover:text-red-400 transition-colors mb-2">
                       {member.name}
