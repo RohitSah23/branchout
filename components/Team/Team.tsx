@@ -63,7 +63,7 @@ export default function Team() {
                 {/* Square Photo for CEO, Icon for others */}
                 <div
                   className={`${
-                    member.image ? "w-36 h-48 border-grey-300 border-1" : "w-16 h-16"
+                    member.image ? "w-36 h-42 " : "w-32 h-32"
                   } bg-gradient-to-br from-red-600  to-red-700 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
                 >
                   {member.image ? (
