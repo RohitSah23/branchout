@@ -6,7 +6,7 @@ import Anmol from "@/app/assets/AnmolBajwa.jpg";
 const team = [
   {
     name: "Gulzar Bajwa",
-    role: "CEO & Founder",
+    role: "CEO",
     description:
       "Providing visionary leadership and driving the company’s mission by building strong global partnerships and ensuring sustainable growth",
     image: CEOImg,
