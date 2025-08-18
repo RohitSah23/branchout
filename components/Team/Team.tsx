@@ -1,15 +1,12 @@
-import Image from "next/image";
 import { Users, Globe } from "lucide-react";
-import CEOImg from "@/app/assets/CEO.png";
 
 const team = [
   {
-    name: "Dr Anton Callus",
-    role: "CEO",
+    name: "Gulzar Bajwa",
+    role: "CEO & Founder",
     description:
-      "Leading Malta operations with extensive HR expertise and local market knowledge",
-    specialty: "HR & Operations",
-    image: CEOImg,
+      "Providing visionary leadership and driving the company’s mission by building strong global partnerships and ensuring sustainable growth",
+    icon: Globe,
     order: "lg:order-2",
   },
   {
@@ -17,18 +14,8 @@ const team = [
     role: "Student and Employer Liaison Lead",
     description:
       "Connecting students with opportunities and maintaining employer relationships",
-    specialty: "Student Relations",
     icon: Users,
     order: "lg:order-1",
-  },
-  {
-    name: "Gulzar Bajwa",
-    role: "Global Partnerships and Business Strategy Lead",
-    description:
-      "Developing strategic partnerships and expanding global business opportunities",
-    specialty: "Strategy & Partnerships",
-    icon: Globe,
-    order: "lg:order-3",
   },
 ];
 
@@ -68,26 +55,15 @@ export default function Team() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {team.map((member, index) => (
             <div key={index} className={`group relative ${member.order}`}>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 h-full text-center">
-                
-                {/* Square Photo for CEO, Icons for Others */}
+                {/* Icon */}
                 <div
-                  className={`${
-                    member.image ? "w-28 h-28" : "w-16 h-16"
-                  } bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
+                  className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden"
                 >
-                  {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      className="object-cover w-full h-full"
-                    />
-                  ) : (
-                    <member.icon className="w-8 h-8 text-white" />
-                  )}
+                  <member.icon className="w-8 h-8 text-white" />
                 </div>
 
                 {/* Content */}
@@ -103,9 +79,7 @@ export default function Team() {
 
                   <p className="text-gray-300 leading-relaxed">{member.description}</p>
 
-                  <div className="inline-flex items-center px-3 py-1 bg-red-600/20 text-red-400 rounded-full text-xs font-semibold">
-                    {member.specialty}
-                  </div>
+             
                 </div>
               </div>
 
