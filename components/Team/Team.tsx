@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Users } from "lucide-react";
 import CEOImg from "@/app/assets/CEO.png";
+import Anmol from "@/app/assets/AnmolBajwa.jpg";
 
 const team = [
   {
@@ -15,7 +16,7 @@ const team = [
     role: "Student and Employer Liaison Lead",
     description:
       "Connecting students with opportunities and maintaining employer relationships",
-    icon: Users,
+    image: Anmol,
   },
 ];
 
@@ -57,25 +58,24 @@ export default function Team() {
         {/* Team Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {team.map((member, index) => (
-            <div key={index} className={`group relative`}>
+            <div key={index} className="group relative">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 h-full text-center">
                 
-                {/* Square Photo for CEO, Icon for others */}
-                <div
-                  className={`${
-                    member.image ? "w-36 h-42 " : "w-32 h-32"
-                  } bg-gradient-to-br from-red-600  to-red-700 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
-                >
-                  {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      className="object-cover w-full h-full"
-                    />
-                  ) : (
-                    <member.icon className="w-8 h-8 text-white" />
-                  )}
-                </div>
+               <div className="relative w-48 h-64 mx-auto mb-6 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-500">
+  {/* Gradient border glow */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-red-500 via-red-600 to-red-700 opacity-70 group-hover:opacity-100 blur-lg -z-10 transition-opacity"></div>
+
+  {/* Image */}
+  <Image
+    src={member.image}
+    alt={member.name}
+    className="w-full h-full object-cover rounded-2xl border-2 border-white/10 group-hover:border-red-400/60 transition-colors duration-500"
+  />
+
+  {/* Overlay gradient */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent rounded-2xl"></div>
+</div>
+
 
                 {/* Content */}
                 <div className="space-y-4">
