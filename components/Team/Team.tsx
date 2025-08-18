@@ -1,4 +1,6 @@
-import { Users, Globe } from "lucide-react";
+import Image from "next/image";
+import { Users } from "lucide-react";
+import CEOImg from "@/app/assets/CEO.png";
 
 const team = [
   {
@@ -6,8 +8,7 @@ const team = [
     role: "CEO & Founder",
     description:
       "Providing visionary leadership and driving the company’s mission by building strong global partnerships and ensuring sustainable growth",
-    icon: Globe,
-    order: "lg:order-2",
+    image: CEOImg,
   },
   {
     name: "Anmol Bajwa",
@@ -15,7 +16,6 @@ const team = [
     description:
       "Connecting students with opportunities and maintaining employer relationships",
     icon: Users,
-    order: "lg:order-1",
   },
 ];
 
@@ -57,13 +57,24 @@ export default function Team() {
         {/* Team Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {team.map((member, index) => (
-            <div key={index} className={`group relative ${member.order}`}>
+            <div key={index} className={`group relative`}>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2 h-full text-center">
-                {/* Icon */}
+                
+                {/* Square Photo for CEO, Icon for others */}
                 <div
-                  className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden"
+                  className={`${
+                    member.image ? "w-36 h-48 border-grey-300 border-1" : "w-16 h-16"
+                  } bg-gradient-to-br from-red-600  to-red-700 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg overflow-hidden`}
                 >
-                  <member.icon className="w-8 h-8 text-white" />
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <member.icon className="w-8 h-8 text-white" />
+                  )}
                 </div>
 
                 {/* Content */}
@@ -78,8 +89,6 @@ export default function Team() {
                   </div>
 
                   <p className="text-gray-300 leading-relaxed">{member.description}</p>
-
-             
                 </div>
               </div>
 
