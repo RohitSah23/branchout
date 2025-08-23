@@ -62,58 +62,42 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => {
-            const isLastTwo = index >= services.length - 2;
+        {/* Desktop (lg) layout */}
+        <div className="hidden lg:grid grid-cols-3 gap-8 mb-16">
+          {/* First row (3 cards) */}
+          {services.slice(0, 3).map((service, index) => (
+            <ServiceCard key={index} service={service} />
+          ))}
 
-            return (
-              <div 
-                key={index}
-                className={`group relative ${
-                  isLastTwo ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''
-                }`}
-              >
-                <div className="h-full p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-black/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2">
-                  {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <service.icon className="h-8 w-8 text-white" />
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-black mb-4 group-hover:text-red-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-800">
-                        <div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Action */}
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-red-500/50 text-red-400 hover:bg-red-500 hover:text-white transition-all duration-300 group"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
-
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
+          {/* Second row (2 centered cards) */}
+          <div className="col-span-3 flex justify-center gap-8">
+            {services.slice(3).map((service, index) => (
+              <div key={index} className="w-full max-w-sm">
+                <ServiceCard service={service} />
               </div>
-            );
-          })}
+            ))}
+          </div>
+        </div>
+
+        {/* Tablet (md) layout */}
+        <div className="hidden md:grid lg:hidden grid-cols-2 gap-8 mb-16">
+          {/* First 4 cards as 2x2 grid */}
+          {services.slice(0, 4).map((service, index) => (
+            <ServiceCard key={index} service={service} />
+          ))}
+          {/* Last card centered */}
+          <div className="col-span-2 flex justify-center">
+            <div className="w-full max-w-sm">
+              <ServiceCard service={services[4]} />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile (<md) layout */}
+        <div className="grid grid-cols-1 gap-8 mb-16 md:hidden">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} />
+          ))}
         </div>
 
         {/* Bottom CTA */}
@@ -127,5 +111,50 @@ export default function Services() {
         </div>
       </div>
     </section>
+  );
+}
+
+/* Card Component */
+function ServiceCard({ service }: { service: any }) {
+  return (
+    <div className="group relative">
+      <div className="h-full p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-black/10 hover:border-red-500/50 transition-all duration-500 hover:-translate-y-2">
+        {/* Icon */}
+        <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+          <service.icon className="h-8 w-8 text-white" />
+        </div>
+
+        {/* Content */}
+        <h3 className="text-xl font-bold text-black mb-4 group-hover:text-red-400 transition-colors">
+          {service.title}
+        </h3>
+        
+        <p className="text-gray-600 mb-6 leading-relaxed">
+          {service.description}
+        </p>
+
+        {/* Features */}
+        <ul className="space-y-2 mb-6">
+          {service.features.map((feature: string, idx: number) => (
+            <li key={idx} className="flex items-center text-sm text-gray-800">
+              <div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></div>
+              {feature}
+            </li>
+          ))}
+        </ul>
+
+        {/* Action */}
+        <Button 
+          variant="outline" 
+          className="w-full border-red-500/50 text-red-400 hover:bg-red-500 hover:text-white transition-all duration-300 group"
+        >
+          Learn More
+          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+        </Button>
+      </div>
+
+      {/* Glow Effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
+    </div>
   );
 }
