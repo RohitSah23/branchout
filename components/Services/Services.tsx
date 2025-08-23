@@ -1,6 +1,6 @@
 'use client';
 
-import { Briefcase, Award, GraduationCap, ArrowRight } from 'lucide-react';
+import { Briefcase, Award, GraduationCap, ArrowRight, Building2, Laptop } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const services = [
@@ -24,24 +24,26 @@ const services = [
     description: 'We maintain MOUs with Maltese colleges and universities for on-campus study, handle your application submissions, assist with visa guidance, appointment scheduling and provide ongoing support',
     features: ['University Partnerships', 'Visa Assistance', 'Application Support', 'Ongoing Guidance'],
     color: 'from-red-600 to-red-700'
+  },
+  {
+    icon: Building2,
+    title: 'Consultancy',
+    description: 'Our expert advisors provide personalized consultancy for career planning, education pathways, and compliance guidance to help you make informed decisions for a successful future in Malta.',
+    features: ['Career Guidance', 'Education Pathways', 'Regulatory Compliance', 'Personalized Roadmaps'],
+    color: 'from-gray-700 to-gray-900'
+  },
+  {
+    icon: Laptop,
+    title: 'Software Services',
+    description: 'We deliver custom software solutions tailored for education, recruitment, and business management. Our services include system integration, automation, and digital transformation.',
+    features: ['Custom Software', 'Automation Tools', 'System Integration', 'Digital Transformation'],
+    color: 'from-red-500 to-red-700'
   }
 ];
 
 export default function Services() {
   return (
     <section id="services" className="py-24 bg-white relative overflow-hidden">
-      {/* Background Pattern */}
-      {/* <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(45deg, #CF142B 25%, transparent 25%), 
-                           linear-gradient(-45deg, #CF142B 25%, transparent 25%), 
-                           linear-gradient(45deg, transparent 75%, #CF142B 75%), 
-                           linear-gradient(-45deg, transparent 75%, #CF142B 75%)`,
-          backgroundSize: '60px 60px',
-          backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
-        }}></div>
-      </div> */}
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center mb-16">
