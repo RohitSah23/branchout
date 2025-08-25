@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold text-white mb-3">5. Your Rights</h2>
               <p className="text-gray-400">
                 You have the right to access, update, or request deletion of your personal data. 
-                To exercise these rights, please contact us at <span className="text-red-500">info@branchout.com</span>.
+                To exercise these rights, please contact us at <span className="text-red-500">contact page.</span>.
               </p>
             </div>
           </div>
