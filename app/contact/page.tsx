@@ -170,7 +170,7 @@ export default function ContactPage() {
                       <p className="text-gray-600 text-sm">+356 7941 6447</p>
                     </div>
                   </div> */}
-
+{/* 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Mail className="h-6 w-6 text-red-600" />
@@ -179,7 +179,7 @@ export default function ContactPage() {
                       <h4 className="font-semibold text-black mb-1">Email</h4>
                       <p className="text-gray-600 text-sm">consultancybranchout@gmail.com</p>
                     </div>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
 
