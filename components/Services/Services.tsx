@@ -1,7 +1,6 @@
 'use client';
 
 import { Briefcase, Award, GraduationCap, ArrowRight, Building2, Laptop } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 const services = [
   {
@@ -48,7 +47,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-white relative overflow-hidden">
+    <section id="services" className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center mb-16">
@@ -97,14 +96,7 @@ export default function Services() {
                     ))}
                   </ul>
 
-                  {/* Button */}
-                  <Button
-                    variant="outline"
-                    className="w-full border-red-500/50 text-red-400 hover:bg-red-500 hover:text-white transition-all duration-300 group"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+           
                 </div>
 
                 {/* Glow */}
@@ -137,13 +129,7 @@ export default function Services() {
                         </li>
                       ))}
                     </ul>
-                    <Button
-                      variant="outline"
-                      className="w-full border-red-500/50 text-red-400 hover:bg-red-500 hover:text-white transition-all duration-300 group"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+              
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
                 </div>
@@ -176,13 +162,7 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    variant="outline"
-                    className="w-full border-red-500/50 text-red-400 hover:bg-red-500 hover:text-white transition-all duration-300 group"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                 
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
               </div>
@@ -213,13 +193,7 @@ export default function Services() {
                         </li>
                       ))}
                     </ul>
-                    <Button
-                      variant="outline"
-                      className="w-full border-red-500/50 text-red-400 hover:bg-red-500 hover:text-white transition-all duration-300 group"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                   
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
                 </div>
@@ -252,28 +226,12 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    variant="outline"
-                    className="w-full border-red-500/50 text-red-400 hover:bg-red-500 hover:text-white transition-all duration-300 group"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+           
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
               </div>
             );
           })}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-          >
-            Explore All Services
-          </Button>
         </div>
       </div>
     </section>
