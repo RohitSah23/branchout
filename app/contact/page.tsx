@@ -101,15 +101,15 @@ export default function ContactPage() {
                       <div className="space-y-2">
                         <label className="text-sm font-semibold text-gray-700">Inquiry Type *</label>
                         <Select onValueChange={(value: string) => handleInputChange('inquiryType', value)}>
-                          <SelectTrigger className="rounded-xl border-gray-200 focus:border-red-500 focus:ring-red-500">
+                          <SelectTrigger className="rounded-xl border-gray-200 cursor-pointer  focus:border-red-500 focus:ring-red-500">
                             <SelectValue placeholder="Select inquiry type" />
                           </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="student-placement">Student Placement</SelectItem>
-                            <SelectItem value="job-recruitment">Job Recruitment</SelectItem>
-                            <SelectItem value="skills-card">Skills Card</SelectItem>
-                            <SelectItem value="visa-assistance">Visa Assistance</SelectItem>
-                            <SelectItem value="general">General Inquiry</SelectItem>
+                          <SelectContent className='bg-white cursor-pointer'  >
+                            <SelectItem className='hover:bg-grey-300 cursor-pointer'  value="student-placement">Student Placement</SelectItem>
+                            <SelectItem className='hover:bg-grey-300 cursor-pointer'  value="job-recruitment">Job Recruitment</SelectItem>
+                            <SelectItem className='hover:bg-grey-300 cursor-pointer'  value="skills-card">Skills Card</SelectItem>
+                            <SelectItem className='hover:bg-grey-300 cursor-pointer'   value="visa-assistance">Visa Assistance</SelectItem>
+                            <SelectItem className='hover:bg-grey-300 cursor-pointer'  value="general">General Inquiry</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
               </Card>
 
               {/* Map */}
-              <Card className="shadow-xl border-0 rounded-xl overflow-hidden">
+              {/* <Card className="shadow-xl border-0 rounded-xl overflow-hidden">
                 <div className="h-64 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
                   <div className="text-center">
                     <MapPin className="h-12 w-12 text-red-600 mx-auto mb-2" />
@@ -216,7 +216,7 @@ export default function ContactPage() {
                     <p className="text-red-600 text-sm">Valletta, Malta</p>
                   </div>
                 </div>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>
