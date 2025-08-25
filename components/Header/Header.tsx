@@ -21,10 +21,10 @@ export default function Header() {
 
   const navItems = [
     { name: 'Home', href: '#' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Courses', href: '#courses' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Courses', href: '/#courses' },
     { name: 'Contact', href: '/contact' },
+    { name: 'About Us', href: '/about' },
   ];
 
   return (
