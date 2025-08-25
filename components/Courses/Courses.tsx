@@ -3,6 +3,7 @@
 import { GraduationCap, Award, BookOpen, Users, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Link from 'next/link';
 
 const courses = [
   {
@@ -112,6 +113,8 @@ export default function Courses() {
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Contact us to match you with the right institution and programme for your career goals
           </p>
+        
+        <Link href="#courses">
           <Button 
             size="lg"
             variant="outline"
@@ -120,6 +123,7 @@ export default function Courses() {
             Find Your Program
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
+          </Link>
         </div>
       </div>
     </section>
