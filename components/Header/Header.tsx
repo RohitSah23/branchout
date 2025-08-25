@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'Services', href: '/#services' },
     { name: 'Courses', href: '/#courses' },
     { name: 'Contact', href: '/contact' },
