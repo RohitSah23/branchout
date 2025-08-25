@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     'Branch Out Consultancy Ltd (BOCL) helps students and job seekers achieve global opportunities in Malta. We provide expert guidance in education, career placements, and visa support, bridging talent with international industries for a successful future.',
      icons: {
-    icon: '/favicon.png'  }
+    icon: '/favicon.ico'  }
 ,  openGraph: {
     title: 'Branchout Consultancy',
     description:
