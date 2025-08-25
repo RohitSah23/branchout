@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowRight, Play, MapPin, Users, Award } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -26,22 +27,23 @@ export default function Hero() {
               Expert visa facilitation, placement with Malta&#39;s top schools and employers, and end-to-end support fully compliant with Maltese law.
             </p>
           </div>
+<div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-6 sm:pt-10">
+  <Link
+    href="#services"
+    className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-base sm:text-lg font-bold rounded-full shadow-xl hover:shadow-red-500/30 transform hover:scale-105 transition-all duration-300 group"
+  >
+    <span>Our Services</span>
+    <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
+  </Link>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center pt-6 sm:pt-10">
-            <button
-              className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-base sm:text-lg font-bold rounded-full shadow-xl hover:shadow-red-500/30 transform hover:scale-105 transition-all duration-300 group"
-            >
-              <span>Our Services</span>
-              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
-            </button>
-
-            <button
-              className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 border-2 border-white text-white text-base sm:text-lg font-bold rounded-full backdrop-blur-md bg-white/10 hover:bg-white hover:text-black transform hover:scale-105 transition-all duration-300 group"
-            >
-              <Play className="mr-2 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
-              <span>About Us</span>
-            </button>
-          </div>
+  <Link
+    href="/about"
+    className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 border-2 border-white text-white text-base sm:text-lg font-bold rounded-full backdrop-blur-md bg-white/10 hover:bg-white hover:text-black transform hover:scale-105 transition-all duration-300 group"
+  >
+    <Play className="mr-2 h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-1 group-hover:scale-110" />
+    <span>About Us</span>
+  </Link>
+</div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 pt-12 sm:pt-16 max-w-5xl mx-auto">
             {[
