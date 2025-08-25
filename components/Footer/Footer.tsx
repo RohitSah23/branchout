@@ -6,8 +6,8 @@ import { MapPin, Phone, Mail, Globe, Linkedin, Twitter, Facebook } from 'lucide-
 const quickLinks = [
   { name: 'Home', href: '#' },
   { name: 'About Us', href: '/about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Courses', href: '#courses' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Courses', href: '#/courses' },
   { name: 'Contact Us', href: '/contact' },
   // { name: 'Privacy Policy', href: '/privacy' }
 ];
