@@ -9,15 +9,15 @@ const quickLinks = [
   { name: 'Services', href: '#services' },
   { name: 'Courses', href: '#courses' },
   { name: 'Contact Us', href: '/contact' },
-  { name: 'Privacy Policy', href: '/privacy' }
+  // { name: 'Privacy Policy', href: '/privacy' }
 ];
 import Logo from '../../app/assets/Logo.png';
 import Image from 'next/image';
 
 const socialLinks = [
   { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Twitter', href: '#', icon: Twitter },
-  { name: 'Facebook', href: '#', icon: Facebook }
+  // { name: 'Twitter', href: '#', icon: Twitter },
+  // { name: 'Facebook', href: '#', icon: Facebook }
 ];
 
 export default function Footer() {
@@ -97,7 +97,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-red-400 flex-shrink-0" />
                 <Link
                   href="tel:+35679416447"
@@ -105,9 +105,9 @@ export default function Footer() {
                 >
                   +356 7941 6447
                 </Link>
-              </div>
+              </div> */}
 
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-red-400 flex-shrink-0" />
                 <Link
                   href="mailto:consultancybranchout@gmail.com"
@@ -115,7 +115,7 @@ export default function Footer() {
                 >
                   consultancybranchout@gmail.com
                 </Link>
-              </div>
+              </div> */}
 
               <div className="flex items-center space-x-3">
                 <Globe className="h-5 w-5 text-red-400 flex-shrink-0" />
