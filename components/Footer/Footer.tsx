@@ -15,7 +15,7 @@ import Logo from '../../app/assets/Logo.png';
 import Image from 'next/image';
 
 const socialLinks = [
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/branchoutco', icon: Linkedin },
   // { name: 'Twitter', href: '#', icon: Twitter },
   // { name: 'Facebook', href: '#', icon: Facebook }
 ];
