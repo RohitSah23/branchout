@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Target, Users, Globe } from 'lucide-react';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -51,6 +52,7 @@ export default function About() {
                 <p className="text-gray-600">Connecting talent worldwide with Malta&apos;s premier opportunities</p>
               </div>
             </div>
+<Link href="/about">
 
             <Button 
               size="lg"
@@ -59,6 +61,8 @@ export default function About() {
               Read Our Full Story
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
+            </Link>
+
           </div>
 
           {/* Visual */}
