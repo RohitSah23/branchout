@@ -98,21 +98,32 @@ export default function ContactPage() {
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <label className="text-sm font-semibold text-gray-700">Inquiry Type *</label>
-                        <Select onValueChange={(value: string) => handleInputChange('inquiryType', value)}>
-                          <SelectTrigger className="rounded-xl border-gray-200 cursor-pointer  focus:border-red-500 focus:ring-red-500">
-                            <SelectValue placeholder="Select inquiry type" />
-                          </SelectTrigger>
-                          <SelectContent className='bg-white cursor-pointer'  >
-                            <SelectItem className='hover:bg-grey-300 cursor-pointer'  value="student-placement">Student Placement</SelectItem>
-                            <SelectItem className='hover:bg-grey-300 cursor-pointer'  value="job-recruitment">Job Recruitment</SelectItem>
-                            <SelectItem className='hover:bg-grey-300 cursor-pointer'  value="skills-card">Skills Card</SelectItem>
-                            <SelectItem className='hover:bg-grey-300 cursor-pointer'   value="visa-assistance">Visa Assistance</SelectItem>
-                            <SelectItem className='hover:bg-grey-300 cursor-pointer'  value="general">General Inquiry</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
+               <div className="space-y-2">
+  <label className="text-sm font-semibold text-gray-900">Inquiry Type *</label>
+  <Select onValueChange={(value: string) => handleInputChange('inquiryType', value)}>
+    <SelectTrigger className="rounded-xl border border-gray-200 cursor-pointer focus:border-red-500 focus:ring-red-500">
+      <SelectValue placeholder="Select inquiry type" />
+    </SelectTrigger>
+    <SelectContent className="bg-white cursor-pointer">
+      <SelectItem className="hover:bg-gray-300 text-black cursor-pointer" value="student-placement">
+        Student Placement
+      </SelectItem>
+      <SelectItem className="hover:bg-gray-300 text-black cursor-pointer" value="job-recruitment">
+        Job Recruitment
+      </SelectItem>
+      <SelectItem className="hover:bg-gray-300 text-black cursor-pointer" value="skills-card">
+        Skills Card
+      </SelectItem>
+      <SelectItem className="hover:bg-gray-300 text-black cursor-pointer" value="visa-assistance">
+        Visa Assistance
+      </SelectItem>
+      <SelectItem className="hover:bg-gray-300 text-black cursor-pointer" value="general">
+        General Inquiry
+      </SelectItem>
+    </SelectContent>
+  </Select>
+</div>
+
                     </div>
 
                     <div className="space-y-2">
